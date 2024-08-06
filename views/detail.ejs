@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      .product-detail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0;
+      }
+
+      .product-detail img {
+        max-width: 300px;
+        margin-right: 2rem;
+      }
+
+      .product-detail-info {
+        max-width: 500px;
+      }
+
+      .product-detail-info h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .product-detail-info p {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .product-detail-info p.price {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>chi tiet san pham</h1>
+      <div class="product-detail">
+        <img src="/uploads/<%= product.image %>" alt="<%= product.name %>" />
+        <div class="product-detail-info">
+          <h2><%= product.name %></h2>
+          <p class="price">Giá: <%= product.price %> VND</p>
+          <p><%= product.description %></p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 My Shop. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
